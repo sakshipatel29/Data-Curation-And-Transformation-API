@@ -37,3 +37,12 @@ xmltodict → Convert XML data into JSON
 
 Create App.py and start writing your APIs.
 
+
+We will write RESTFUL APIs to do following operations on data:
+
+-->Column Renaming
+-->Filtering Conditions
+-->Unit Conversions
+-->Handling Missing Values
+-->Removing Duplicates
+

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 import os
 from werkzeug.utils import secure_filename
 from utils.file_handler import process_uploaded_file
@@ -23,6 +23,12 @@ def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
+# Route to render the UI
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
 # Route for uploading a file
 @app.route("/upload", methods=["POST"])
 def upload_file():
@@ -42,9 +48,9 @@ def upload_file():
         # Process the uploaded file (convert, clean, etc.)
         processed_file_path = process_uploaded_file(file_path, app.config["PROCESSED_FOLDER"])
         
-        return jsonify({"message": "File uploaded successfully", "processed_file": processed_file_path})
+        return render_template("index.html", message="File uploaded successfully!", processed_file=processed_file_path)
     
-    return jsonify({"error": "Invalid file format. Allowed: CSV, JSON, XML"}), 400
+    return render_template("index.html", error="Invalid file format. Allowed: CSV, JSON, XML")
 
 
 # Route for downloading processed file

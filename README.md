@@ -25,5 +25,15 @@ pip install flask pandas
 pip install fastapi uvicorn pandas
 pip install flask-cors
 
+
+pip install flask pandas werkzeug xmltodict
+
+Flask → Web framework
+Pandas → Data transformation and cleaning
+Werkzeug → Secure file handling
+xmltodict → Convert XML data into JSON
+
+
+
 Create App.py and start writing your APIs.
 

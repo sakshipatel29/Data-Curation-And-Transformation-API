@@ -26,22 +26,25 @@ venv\Scripts\activate      # For Windows (Command Prompt)
 pip install flask fastapi uvicorn pandas flask-cors werkzeug xmltodict
 ```
 ### 📌 Dependencies Breakdown:
-Flask → Web framework for building APIs
-FastAPI → High-performance API framework
-Pandas → Data transformation and cleaning
-Werkzeug → Secure file handling
-Flask-CORS → Enable Cross-Origin Resource Sharing
-xmltodict → Convert XML data into JSON
+- **Flask** → Web framework for building APIs  
+- **FastAPI** → High-performance API framework  
+- **Pandas** → Data transformation and cleaning  
+- **Werkzeug** → Secure file handling  
+- **Flask-CORS** → Enable Cross-Origin Resource Sharing  
+- **xmltodict** → Convert XML data into JSON  
 
+---
 
 ### 🛠️ API Features
+
 TransformX-Data-API provides RESTful APIs to perform the following operations on data:
 
-✅ Column Renaming
-✅ Filtering Conditions
-✅ Unit Conversions
-✅ Handling Missing Values
-✅ Removing Duplicates
+- ✅ **Column Renaming**  
+- ✅ **Filtering Conditions**  
+- ✅ **Unit Conversions**  
+- ✅ **Handling Missing Values**  
+- ✅ **Removing Duplicates**  
+
 
 
 ### 🚀 Start the Backend Server
